@@ -264,6 +264,7 @@ i {
         text-transform: uppercase;
         font-weight: bold;
         position: relative;
+        text-decoration:none;
     }
 
 #main-menu {
@@ -523,9 +524,6 @@ p.about-pb {
     margin-top: 39px;
 }
 
-.about-bottom-img {
-    padding-top: 46px;
-}
 
     .about-bottom-img img {
         max-height: 500px;
@@ -706,7 +704,7 @@ p.about-pb {
 
 .choose-img > img {
     /* float: right;*/
-    margin-right: -80px;
+
     max-height: 450px;
     border-radius: 16px;
 }
@@ -1552,7 +1550,7 @@ input.submit {
 }
 
 .footer-text span {
-    color: #7a7a7a;
+    color: #fff;
     font-family: "Lato", sans-serif;
     font-size: 14px;
     text-transform: capitalize;
@@ -1560,18 +1558,16 @@ input.submit {
 }
 
     .footer-text span a {
-        color: #7a7a7a;
+        color: #fff;
         transition: all 0.3s ease 0s;
     }
 
         .footer-text span a:hover {
             text-decoration: underline;
-            color: #e9677b;
+            color: #ffffff;
         }
 
-.footer-all {
-    margin-top: 38px;
-}
+
 /*............. 18. Scrollup   ................*/
 
 #toTop {
@@ -1948,7 +1944,7 @@ input.submit {
 }
 
 #support-area {
-    background-color: #000;
+    background-color: #ffffff;
 }
 
 .feature-list.custom {
@@ -1979,7 +1975,8 @@ input.submit {
     }
 
 .footer-area {
-    padding: 80px 0px;
+    padding: 30px 0px;
+    background-color: #e9677b;
 }
 
 .single-price-package.active.res-xs.lg-price {
@@ -1994,4 +1991,16 @@ input.submit {
 }
 .button-set a {
     color: transparent !important;
+}
+.footer-icon i{
+    color:white !important;
+}
+#about-area{
+    padding:60px 0px;
+}
+#about-area .about-bottom-left.clearfix {
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
 }

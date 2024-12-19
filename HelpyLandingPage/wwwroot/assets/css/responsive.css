@@ -650,6 +650,7 @@
     .about-bottom-img {
         padding-left: 0;
         text-align: center;
+        margin-top:20px;
     }
     .title-style > h1 {
         font-size: 26px;
@@ -822,9 +823,7 @@
     .contact-from {
         margin-bottom: 50px;
     }
-    .footer-all {
-        margin-top: 79px;
-    }
+
     .pb-80 {
         padding-bottom: 45px;
     }
