@@ -1,0 +1,412 @@
+﻿@using Microsoft.AspNetCore.Mvc.TagHelpers
+@model List<HelpyLandingPage.Services.Blog.BlogPost>
+@{
+    ViewData["Title"] = "CommingSoonLandingPage";
+}
+<!-- favicon
+============================================ -->
+<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon-16x16.png">
+<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon-32x32.png">
+<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+<!-- Bootstrap CSS
+============================================ -->
+<link rel="stylesheet" href="~/assets/css/bootstrap.min.css">
+<!-- font-awesome CSS
+============================================ -->
+<link rel="stylesheet" href="~/assets/css/font-awesome.min.css">
+<!-- material-design CSS
+============================================ -->
+<link rel="stylesheet" href="~/assets/css/material-design-iconic-font.min.css">
+
+
+<!-- main CSS
+============================================ -->
+<link rel="stylesheet" href="~/assets/css/main.css">
+<!-- responsive CSS
+============================================ -->
+<link rel="stylesheet" href="~/assets/css/responsive.css">
+
+<div id="home-area" class=" bg-oapcity-40 bg-overly bg-img-1 sm-height-none">
+    <div class="table">
+        <div class="table-cell">
+            <div class="container">
+                <div class="home-slider clearfix">
+                    <div class="row">
+                        <div class="col-lg-8 col-md-8">
+                            <div class="top-text pt-60">
+                                <div class="slider-text">
+                                    <h1>Comming</h1>
+                                    <h2>Soon</h2>
+                                    <p>A Perfect Dating App That Provides You Tailored Intentional Matches Through AI According To Your Intentions </p>
+                                    <div class="button-set">
+                                        <a class="button active" href="#">
+                                            <i class="zmdi zmdi-apple"></i>
+                                            <span>
+                                                Available on the
+                                                <span class="large-text">App Store</span>
+                                            </span>
+                                        </a>
+                                        <a class="button btn-mobile" href="#">
+                                            <i class="zmdi zmdi-google-play"></i>
+                                            <span>
+                                                Available on the
+                                                <span class="large-text">Play Store</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4">
+                            <div class="slider-img">
+                                <img src="assets/img/banner_img.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- About Area
+============================================ -->
+
+<div id="blog-area" class="pricing-area gray-bg ptb-50">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <div class="title-style title-pb2">
+                    <h1>Helpy <span> Blog</span></h1>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            @foreach (var post in Model)
+            {
+                <div class="col-lg-4 col-md-4 col-12">
+                    <div class="single-price-package">
+                        <div class="price-title">
+                            <h3>@Html.Raw(post.Title.Rendered)</h3>
+                        </div>
+                        <div class="post-content">
+                            @if (post.RttpgFeaturedImageUrl != null)
+                            {
+                                <img src="@(post.RttpgFeaturedImageUrl?.Full?[0]?.ToString())" alt="@post.Title.Rendered" style="max-width: 100%; height: auto;" />
+                            }
+
+                            <p>
+                                <span class="text-bottom">@Html.Raw(post.Excerpt.Rendered)</span>
+                            </p>
+                        </div>
+                        <div class="price-list">
+                            <a class="btn btn-success" href="@post.Link" target="_blank">Read more</a>
+                        </div>
+                    </div>
+                </div>
+            }
+
+        </div>
+    </div>
+</div>
+
+<div id="service-area">
+    <div class="pt-100 pb-120">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-12 col-lg-4">
+                    <div class="single-item res-sm text-center">
+                        <div class="single-item-icon">
+                            <i class="zmdi zmdi-settings"></i>
+                        </div>
+                        <h4 class="ht-pt">Easy To Customize</h4>
+                        <!-- <p>Lorem ipsum dolor sit amet, consectetur adipising elit. Pellentesque vel volutpat felis, eu condimtum ma Pellentesque mollis eros vel. </p> -->
+                    </div>
+                </div>
+                <div class="col-md-12 col-lg-4">
+                    <div class="single-item res-sm res-xs text-center">
+                        <div class="single-item-icon">
+                            <i class="zmdi zmdi-favorite"></i>
+                        </div>
+                        <h4 class="ht-pt">User Friendly</h4>
+                        <!-- <p>Lorem ipsum dolor sit amet, consectetur adipising elit. Pellentesque vel volutpat felis, eu condimtum ma Pellentesque mollis eros vel. </p> -->
+                    </div>
+                </div>
+                <div class="col-md-12 col-lg-4">
+                    <div class="single-item text-center">
+                        <div class="single-item-icon">
+                            <i class="zmdi zmdi-time"></i>
+                        </div>
+                        <h4 class="ht-pt">24/7 Support</h4>
+                        <!-- <p>Lorem ipsum dolor sit amet, consectetur adipising elit. Pellentesque vel volutpat felis, eu condimtum ma Pellentesque mollis eros vel. </p> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="about-area" class="all-about gray-bg">
+    <div class="container">
+        <div class="home-slider2 clearfix">
+            <div class="row">
+                <div class="col-lg-7 col-md-6">
+                    <div class="about-bottom-left clearfix pt-120 pb-40">
+                        <h1>about <span>Helpy</span></h1>
+                        <h3>Helpy is more than just a dating app, it’s a platform dedicated to helping you become an intentional dater. </h3>
+                        <p class="about-pb">Dating in today's digital age offers unparalleled opportunities to meet new people, but it also presents unique challenges. With countless profiles and endless swipes, it’s easy to feel like you’re caught in a cycle of surface-level connections. Intentional dating, however, provides a way to cut through the noise. By approaching dating with clarity and purpose, you can find a match who aligns with your values, goals, and specific needs. </p>
+                        <p>One unique aspect of intentional dating is the ability to express and address financial intentions in a relationship. For some, this might mean helping a partner with their tuition, college fees, loans, groceries or other bills while for others, it may involve seeking a partner who can offer that kind of support. By openly and respectfully addressing these needs, intentional daters can build aligned connections. Let’s explore how intentional dating can guide both men and women in articulating and fulfilling these goals.</p>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-6">
+                    <div class="about-bottom-img">
+                        <img src="assets/img/about.jpeg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="choose-area pt-120 title-pb">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <div class="title-style pb-40">
+                    <h1>why <span>choose us?</span> </h1>
+                    <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel volutpat felis, eu condimentum massa. Pellentesque mollis eros vel mattis tempor. Aliquam </p> -->
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-7 col-lg-12 col-12 text-center">
+                <div class="choose-img">
+                    <img src="assets/img/chose-us.jpg" alt="" class="animatedImage">
+                </div>
+            </div>
+            <div class="col-xl-5 col-lg-12 col-12">
+                <div class="feature-list custom">
+                    <div class="single-features-list2 mb-52">
+                        <div class="feature-list-icon2">
+                            <i class="zmdi zmdi-collection-text"></i>
+                        </div>
+                        <div class="feature-list-text2">
+                            <h3>Unlimited Features</h3>
+                            <!-- <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel volutpat felis, eu condimentum ma Pellentesque mollis eros vel.
+                            </p> -->
+                        </div>
+                    </div>
+                    <div class="single-features-list2 mb-52">
+                        <div class="feature-list-icon2">
+                            <i class="zmdi zmdi-sun"></i>
+                        </div>
+                        <div class="feature-list-text2">
+                            <h3>High Resolution</h3>
+                            <!-- <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel volutpat felis, eu condimentum ma Pellentesque mollis eros vel.
+                            </p> -->
+                        </div>
+                    </div>
+                    <div class="single-features-list2 mrn-nn mb-52">
+                        <div class="feature-list-icon2">
+                            <i class="zmdi zmdi-brush"></i>
+                        </div>
+                        <div class="feature-list-text2">
+                            <h3>Modern Design</h3>
+                            <!-- <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel volutpat felis, eu condimentum ma Pellentesque mollis eros vel.
+                            </p> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="pricing-area" class="pricing-area gray-bg ptb-120">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <div class="title-style title-pb2">
+                    <h1>pricing <span> plan</span></h1>
+                    <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel volutpat felis, eu condimentum massa. Pellentesque mollis eros vel mattis tempor. Aliquam </p> -->
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-12">
+                <div class="single-price-package">
+                    <div class="price-title">
+                        <h3>Month</h3>
+                    </div>
+                    <div class="price">
+                        <h4>
+                            <span class="text-top">$</span>
+                            <span class="text-large">50</span>
+                        </h4>
+                        <p>
+                            <span class="text-bottom">/For a Month</span>
+                        </p>
+                    </div>
+                    <div class="price-list">
+                        <ul>
+                            <li>View and reply to every message</li>
+                            <li>Report Ghosting with Ghost Button</li>
+                            <li>Report User</li>
+                        </ul>
+                        <!-- <div class="price-btn">
+                            <button class="button" type="button">Sign up</button>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-12">
+                <div class="single-price-package active res-xs">
+                    <div class="price-title">
+                        <h3>3 Month</h3>
+                    </div>
+                    <div class="price">
+                        <h4>
+                            <span class="text-top">$</span>
+                            <span class="text-large">125</span>
+                        </h4>
+                        <p>
+                            <span class="text-bottom">/For 3 Month</span>
+                        </p>
+                    </div>
+                    <div class="price-list">
+                        <ul>
+                            <li>View and reply to every message</li>
+                            <li>Report Ghosting with Ghost Button</li>
+                            <li>Report User</li>
+                        </ul>
+                        <!-- <div class="price-btn">
+                            <button class="button" type="button">Sign up</button>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-12">
+                <div class="single-price-package">
+                    <div class="price-title">
+                        <h3>6 Month</h3>
+                    </div>
+                    <div class="price">
+                        <h4>
+                            <span class="text-top">$</span>
+                            <span class="text-large">225</span>
+                        </h4>
+                        <p>
+                            <span class="text-bottom">/For 6 month</span>
+                        </p>
+                    </div>
+                    <div class="price-list">
+                        <ul>
+                            <li>View and reply to every message</li>
+                            <li>Report Ghosting with Ghost Button</li>
+                            <li>Report User</li>
+                        </ul>
+                        <!-- <div class="price-btn">
+                            <button class="button" type="button">Sign up</button>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="support-area" class="contact-area  pt-120">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <div class="title-style title-pb">
+                    <h1>get in<span> touch</span></h1>
+                </div>
+            </div>
+            <div class="ms-auto me-auto col-lg-8 text-center">
+                <div class="contact-from">
+                    <form id="contact-form" action="" method="post">
+                        <input name="name" id="name" type="text" placeholder="Name">
+                        <input name="email" id="email" type="text" placeholder="Email">
+
+                        <input class="submit" type="submit" value="SUBMIT">
+                    </form>
+                    <p class="form-messege"></p>
+                </div>
+            </div>
+        </div>
+        <div class="conatct-info fix">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 text-center">
+                    <div class="single-contact-info">
+                        <div class="contact-icon">
+                            <i class="zmdi zmdi-phone"></i>
+                        </div>
+                        <div class="contact-text">
+                            <span>
+                                +1 438-812-8532
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 text-center">
+                    <div class="single-contact-info res-xs2">
+                        <div class="contact-icon">
+                            <i class="zmdi zmdi-globe-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <span>
+                                <a href="#">Contact@helpyapp.co</a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 text-center">
+                    <div class="single-contact-info">
+                        <div class="contact-icon">
+                            <i class="zmdi zmdi-pin"></i>
+                        </div>
+                        <div class="contact-text">
+                            <span>
+                                1804 le Corbusier, Laval, Quebec, H7S 2N3, Canada
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#contact-form').on('submit', function (e) {
+            e.preventDefault(); // Prevent form submission
+            debugger;
+            // Get input values
+            var name = $('#name').val();
+            var email = $('#email').val();
+
+            // AJAX POST request to the API
+            $.ajax({
+                url: `https://webapi.helpyapp.co/user/InsertEmail?name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}`,
+                type: 'POST',
+                headers: {
+                    'Authorization': '0f910af0-db08-4d2e-8533-f79028b98345', // Your token here
+                    'Accept': '*/*'
+                },
+                success: function (response) {
+                    debugger;
+                    alert("Email inserted successfully!");
+                    // Display success message
+                    $('#result').html('<p style="color:green;">Email inserted successfully!</p>');
+                    console.log('Response:', response);
+                },
+                error: function (xhr, status, error) {
+                    // Display error message
+                    alert(xhr.responseText);
+                    $('#result').html('<p style="color:red;">Failed to insert email: ' + xhr.responseText + '</p>');
+                    console.error('Error:', error);
+                }
+            });
+        });
+    });
+</script>
